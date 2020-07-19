@@ -68,6 +68,20 @@ img {
     margin-top: 10px;
 }
 
+#hint {
+    background-color: #52d29d;
+    border: none;
+    padding: 13px 26px;
+    border-radius: 2px;
+    color: #ffffff;
+    font-family: 'Gloria Hallelujah', cursive;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
 @-webkit-keyframes pew {
     0% { opacity: 0; }
     20% { opacity: 1; }
