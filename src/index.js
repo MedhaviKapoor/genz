@@ -179,5 +179,10 @@ function openHint(hint) {
   overlay.classList.add('active')
 }
 
+function closeHint(hint) {
+  if (hint == null) return
+  hint.classList.remove('active')
+  overlay.classList.remove('active')
+}
 
 });
