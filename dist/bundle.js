@@ -623,44 +623,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		document.getElementById("newgame").addEventListener('click', function () {
 				newGame(depth, starting_player);
 		});
-
-		var openHintButtons = document.querySelectorAll('[data-hint-target]');
-		var closeHintButtons = document.querySelectorAll('[data-close-button]');
-		var overlay = document.getElementById('overlay');
-
-		openHintButtons.forEach(function (button) {
-				button.addEventListener('click', function () {
-						var hint = document.querySelector(button.dataset.hintTarget);
-						openHint(hint);
-				});
-		});
-
-		overlay.addEventListener('click', function () {
-				var hint = document.querySelectorAll('.hint.active');
-				hint.forEach(function (hint) {
-						closeHint(hint);
-				});
-		});
-
-		closeHintButtons.forEach(function (button) {
-				button.addEventListener('click', function () {
-						var hint = button.closest('.hint');
-						closeHint(hint);
-				});
-		});
-
-		function openHint(hint) {
-				if (hint == null) return;
-				hint.classList.add('active');
-				overlay.classList.add('active');
-		}
-
-		function closeHint(hint) {
-				if (hint == null) return;
-				hint.classList.remove('active');
-				overlay.classList.remove('active');
-		}
 });
+var openHintButtons = document.querySelectorAll('[data-hint-target]');
+var closeHintButtons = document.querySelectorAll('[data-close-button]');
+var overlay = document.getElementById('overlay');
+
+openHintButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+				var hint = document.querySelector(button.dataset.hintTarget);
+				openHint(hint);
+		});
+});
+
+overlay.addEventListener('click', function () {
+		var hint = document.querySelectorAll('.hint.active');
+		hint.forEach(function (hint) {
+				closeHint(hint);
+		});
+});
+
+closeHintButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+				var hint = button.closest('.hint');
+				closeHint(hint);
+		});
+});
+
+function openHint(hint) {
+		if (hint == null) return;
+		hint.classList.add('active');
+		overlay.classList.add('active');
+}
+
+function closeHint(hint) {
+		if (hint == null) return;
+		hint.classList.remove('active');
+		overlay.classList.remove('active');
+}
 
 /***/ }
 /******/ ]);

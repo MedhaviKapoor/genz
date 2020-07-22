@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", event => {
 		newGame(depth, starting_player);
 	});
 
+});
 const openHintButtons = document.querySelectorAll('[data-hint-target]')
 const closeHintButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
@@ -185,4 +186,3 @@ function closeHint(hint) {
   overlay.classList.remove('active')
 }
 
-});
