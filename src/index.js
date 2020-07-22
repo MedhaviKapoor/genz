@@ -137,4 +137,41 @@ document.addEventListener("DOMContentLoaded", event => {
 		newGame(depth, starting_player);
 	});
 
+const openHintButtons = document.querySelectorAll('[data-hint-target]')
+const closeHintButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openHintButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const hint = document.querySelector(button.dataset.hintTarget)
+    openHint(hint)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const hint = document.querySelectorAll('.hint.active')
+  hint.forEach(hint => {
+    closeHint(hint)
+  })
+})
+
+closeHintButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const hint = button.closest('.hint')
+    closeHint(hint)
+  })
+})
+
+function openHint(hint) {
+  if (hint == null) return
+  hint.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeHint(hint) {
+  if (hint == null) return
+  hint.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
 });

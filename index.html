@@ -63,7 +63,22 @@
 				</div>
 
 				<button id="newgame">New Game</button>
-				<button id="hint">Hint</button>
+				<button data-hint-target="#modal">Hint</button>
+                <div class="hint" id="hint">
+                   <div class="hint-header">
+                         <div class="title">Hint for the next move</div>
+                         <button data-close-button class="close-button">&times;</button>
+                   </div>
+                   <div class="hint-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+                   </div>
+                </div>
+                <div id="overlay"></div>
+
+
+
+
+
 				<p><a href="http://themegasm.net/tic-tac-toe-js-es2015-part-1-webpack/">See a tutorial</a> / <a href="https://github.com/alialaa/js-tic-tac-toe">View on Github</a></p>
 			</div>
 		</div>
@@ -73,6 +88,8 @@
 		</div>
 
 	</div>
+
+	
 
 	<script type="text/javascript" src="dist/bundle.js"></script>
 </body>
