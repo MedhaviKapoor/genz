@@ -33,6 +33,17 @@ function drawWinningLine({ direction, row }) {
 	setTimeout(() => { board.className += ' full'; }, 50);
 }
 
+function openHint(hint) {
+	if (hint == null) return
+	hint.classList.add('active')
+	overlay.classList.add('active')
+}
+
+function closeHint(hint) {
+	if (hint == null) return
+	hint.classList.remove('active')
+	overlay.classList.remove('active')
+  }
 
 //Starts a new game with a certain depth and a starting_player of 1 if human is going to start
 function newGame(depth = -1, starting_player = 1) {
@@ -146,14 +157,14 @@ openHintButtons.forEach(button => {
     const hint = document.querySelector(button.dataset.hintTarget)
     openHint(hint)
   })
-})
+});
 
 overlay.addEventListener('click', () => {
   const hint = document.querySelectorAll('.hint.active')
   hint.forEach(hint => {
     closeHint(hint)
   })
-})
+});
 
 closeHintButtons.forEach(button => {
   button.addEventListener('click', () => {
