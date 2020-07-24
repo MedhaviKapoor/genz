@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", event => {
 	document.getElementById("newgame").addEventListener('click', () => {
 		newGame(depth, starting_player);
 	});
-
+    document.getElementById("hint_for_human").innerHTML = 5 + 6;
 });
 const openHintButtons = document.querySelectorAll('[data-hint-target]')
 const closeHintButtons = document.querySelectorAll('[data-close-button]')
