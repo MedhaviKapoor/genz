@@ -623,8 +623,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		document.getElementById("newgame").addEventListener('click', function () {
 				newGame(depth, starting_player);
 		});
-		document.getElementById("hint_for_human").innerHTML = 5 + 6;
 });
+
+document.getElementById("hint_for_human").innerHTML = 5 + 6;
+
 var openHintButtons = document.querySelectorAll('[data-hint-target]');
 var closeHintButtons = document.querySelectorAll('[data-close-button]');
 var overlay = document.getElementById('overlay');
