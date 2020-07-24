@@ -112,7 +112,9 @@ function newGame(depth = -1, starting_player = 1) {
   			});
   		}, false);
   		if(cell) addClass(html_cells[index], cell);
-  	});
+	  });
+	  
+	  document.getElementById("hint_for_human").innerHTML =  "The best move is" + p.getBestMove(b, -100, 100, !maximizing, best);
 }
 
 document.addEventListener("DOMContentLoaded", event => {
@@ -150,7 +152,7 @@ document.addEventListener("DOMContentLoaded", event => {
     
 });
 
-document.getElementById("hint_for_human").innerHTML = 5 + 6;
+
 
 const openHintButtons = document.querySelectorAll('[data-hint-target]')
 const closeHintButtons = document.querySelectorAll('[data-close-button]')
